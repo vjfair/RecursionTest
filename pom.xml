@@ -47,10 +47,10 @@
             </plugin>
         </plugins>
     </build>
-      <distributionManagement>
-    <repository>
-      <id>R_kgDOJd2G1g</id>
-      <url>https://github.com/vjfair/RecursionTest</url>
-    </repository>
-  </distributionManagement>
+    <distributionManagement>
+        <repository>
+            <id>R_kgDOJd2G1g</id>
+            <url>https://github.com/vjfair/RecursionTest</url>
+        </repository>
+    </distributionManagement>
 </project>
