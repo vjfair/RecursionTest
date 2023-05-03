@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/UnitTests/JUnit5TestClass.java to edit this template
- */
+
 package com.mycompany.recursiontest;
 
 import org.junit.jupiter.api.AfterEach;
@@ -11,108 +8,71 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-/**
- *
- * @author vjohn
- */
 public class RecursionTestIT
 {
     
     public RecursionTestIT()
     {
     }
+
     
-    @BeforeAll
-    public static void setUpClass()
+    @Test
+    public void testFact()
     {
+        System.out.println("fact");
+        int n = 5;
+        int expResult = 120;
+        int result = RecursionTest.fact(n);
+        assertEquals(expResult, result);
+    }
+
+    @Test
+    public void testReverseString()
+    {
+        System.out.println("reverseString");
+        String input = "HowDoesitWork";
+        String expResult = "kroWtiseoDwoH";
+        String result = RecursionTest.reverseString(input);
+        assertEquals(expResult, result);
+    }
+
+    @Test
+    public void testIsPalindrome()
+    {
+        System.out.println("isPalindrome");
+        String input = "amanaplanacanalpanama";
+        boolean expResult = true;
+        boolean result = RecursionTest.isPalindrome(input);
+        assertEquals(expResult, result);
     }
     
-    @AfterAll
-    public static void tearDownClass()
+    @Test
+    public void testSum()
     {
+        System.out.println("sum");
+        int n = 100;
+        int expResult = 5050;
+        int result = RecursionTest.sum(n);
+        assertEquals(expResult, result);
     }
-    
-    @BeforeEach
-    public void setUp()
+
+
+    @Test
+    public void testAddUp()
     {
-    }
-    
-    @AfterEach
-    public void tearDown()
-    {
+        System.out.println("addUp");
+        int[] a = {5,4,3,2,1};
+        int start = 0;
+        int end = 5;
+        int expResult = 15;
+        int result = RecursionTest.addUp(a, start, end);
+        assertEquals(expResult, result);
     }
 
     /**
      * Test of main method, of class RecursionTest.
      */
-    @Test
-    public void testMain()
-    {
-        System.out.println("main");
-        String[] args = null;
-        RecursionTest.main(args);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
 
-    /**
-     * Test of fact method, of class RecursionTest.
-     */
-    @Test
-    public void testFact()
-    {
-        System.out.println("fact");
-        int n = 0;
-        int expResult = 0;
-        int result = RecursionTest.fact(n);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
 
-    /**
-     * Test of reverseString method, of class RecursionTest.
-     */
-    @Test
-    public void testReverseString()
-    {
-        System.out.println("reverseString");
-        String input = "";
-        String expResult = "";
-        String result = RecursionTest.reverseString(input);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of isPalindrome method, of class RecursionTest.
-     */
-    @Test
-    public void testIsPalindrome()
-    {
-        System.out.println("isPalindrome");
-        String input = "";
-        boolean expResult = false;
-        boolean result = RecursionTest.isPalindrome(input);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of sum method, of class RecursionTest.
-     */
-    @Test
-    public void testSum()
-    {
-        System.out.println("sum");
-        int n = 0;
-        int expResult = 0;
-        int result = RecursionTest.sum(n);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
     
 }

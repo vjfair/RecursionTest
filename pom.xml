@@ -31,4 +31,20 @@
         <maven.compiler.target>19</maven.compiler.target>
         <exec.mainClass>com.mycompany.recursiontest.RecursionTest</exec.mainClass>
     </properties>
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M5</version>
+                <executions>
+                    <execution>
+                        <id>test</id>
+                        <goals>
+                            <goal>test</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>

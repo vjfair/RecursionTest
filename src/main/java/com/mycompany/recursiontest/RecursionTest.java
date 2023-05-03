@@ -1,14 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
 package com.mycompany.recursiontest;
 
 public class RecursionTest
 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args)
     {
         System.out.println("The factorial of 5 is " + fact(5));
@@ -17,7 +11,7 @@ public class RecursionTest
         {
             5, 4, 3, 2, 1
         };
-        System.out.println("The array sum " + addUp(a, 0, a.length - 1));
+        System.out.println("The array sum " + addUp(a, 0, a.length));
 
         // alternatively we would sum up natural numbers as follows
         int n = 100;
@@ -84,7 +78,7 @@ public class RecursionTest
         }
     }
 
-    private static int addUp(int[] a, int start, int end)
+    public static int addUp(int[] a, int start, int end)
     {
         int sum = 0;
         for (int i = start; i < end; i++)
